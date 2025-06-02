@@ -35,31 +35,51 @@ cd wikikamus-scraper
 
 ### Usage
 
-1. Navigate to your project directory:
+1. **Run the scraper**:
 ```bash
-cd c:\xampp\htdocs\PORTFOLIO\MULTIES
-```
-
-2. Run the scraper:
-```bash
+cd src/
 php wikikamus_scraper.php
 ```
 
-3. Wait for completion. The scraper will:
-   - Process all pages A-Z from Wikikamus
-   - Show progress for each page
-   - Clean and filter the extracted words
-   - Save results to `ayat.txt`
+2. **Test the API**:
+```bash
+cd tests/
+php api_test.php
+```
 
-## 📁 File Structure
+3. **Use the API**:
+```bash
+# Web access
+http://localhost/PORTFOLIO/MULTIES/api/index.php?ayat=word
+
+# See examples
+cd examples/
+php basic_search.php
+```
+
+## 📁 Project Structure
 
 ```
 MULTIES/
-├── wikikamus_scraper.php    # Main scraper script
-├── ayat.txt                 # Output file with extracted words
-├── index.php                # Web interface (if applicable)
-├── README.md                # This documentation
-└── LICENSE                  # License file
+├── src/                          # Source code
+│   └── wikikamus_scraper.php     # Main scraper script
+├── api/                          # API endpoints  
+│   └── index.php                 # Word matching API
+├── data/                         # Data files
+│   └── ayat.txt                  # 27,498 extracted words
+├── docs/                         # Documentation
+│   ├── CHANGELOG.md              # Version history
+│   ├── CONTRIBUTING.md           # Contributor guidelines
+│   ├── STRUCTURE.md              # Project structure guide
+│   └── PROJECT_SUMMARY.md        # Complete summary
+├── tests/                        # Test suite
+│   └── api_test.php              # API tests
+├── examples/                     # Usage examples
+│   └── basic_search.php          # API usage demos
+├── .github/workflows/            # CI/CD automation
+├── README.md                     # This documentation
+├── LICENSE                       # MIT License
+└── .gitignore                    # Git ignore rules
 ```
 
 ## 🔧 Configuration

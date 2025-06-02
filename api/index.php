@@ -4,8 +4,7 @@ header('Content-Type: application/json');
 class WordMatcher {
     private $filename;
     private $words;
-    
-    public function __construct($filename = "ayat.txt") {
+      public function __construct($filename = "../data/ayat.txt") {
         $this->filename = $filename;
         $this->loadWords();
     }
